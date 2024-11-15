@@ -27,7 +27,9 @@
     transition: transform 0.3s ease;
 }
 
-.fa-user-tie {
+.fa-user-tie,
+.fa-grip,
+.fa-briefcase {
     font-size: 20rem;
 
     color: $eighth;
@@ -36,9 +38,12 @@
     &:hover {
         color: $sixth;
     }
+
+    &:active {
+        color: $sixth;
+    }
 }
 
 .navbar {
-    backdrop-filter: blur(20px);
     box-shadow: $second 0px 20px 30px;
 }

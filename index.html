@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="HTML, CSS, SCSS, JS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página Docentes">
+    <meta name="description" content="Página Home">
     <meta name="author" content="Daniel Oliveira Matias">
 
     <!-- LINKS -->
@@ -16,162 +16,107 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="assets/css/main.min.css">
     <title>Docentes</title>
+    <style>
+        main {
+            right: 0;
+            width: 90%;
+            position: fixed;
+        }
+
+        .navbar {
+            left: 0;
+            width: 10%;
+            height: 100%;
+            position: fixed;
+            backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 700px) {
+            .navbar {
+                z-index: 100000;
+                bottom: 0 !important;
+                padding-bottom: 8rem;
+                width: 100% !important;
+                height: 15% !important;
+                border: none !important;
+                backdrop-filter: blur(5px);
+            }
+
+            main {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 1000px) {
+
+            .fa-user-tie,
+            .fa-grip,
+            .fa-briefcase {
+                font-size: 2rem !important;
+            }
+        }
+
+        @media (min-width: 1300px) {
+
+            .fa-user-tie,
+            .fa-grip,
+            .fa-briefcase {
+                font-size: 3rem !important;
+            }
+        }
+
+        @media (min-width: 2000px) {
+
+            .fa-user-tie,
+            .fa-grip,
+            .fa-briefcase {
+                font-size: 4rem !important;
+            }
+        }
+    </style>
 </head>
 
-<body>
-
-    <nav class="navbar navbar-expand-lg fixed-top">
+<body class="d-flex flex-row">
+    <nav class="navbar border-end border-secondary">
         <div class="container-fluid d-flex align-items-center justify-content-center">
-            <h1 class=" card navbar-brand text-uppercase fs-1 fw-bold h1 p-2 px-4 border-bottom border-secondary
-            opacity-75 d-flex align-items-center justify-content-center flex-row" href="index.html">
-                Doc
+            <button class="my-3 card fw-bold h1 p-2 px-4 border-bottom border-secondary
+            d-flex align-items-center justify-content-center flex-row mx-3 active" type="button"
+                data-bs-target="#carouselMain" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1">
 
                 <i class="fa-solid fa-user-tie my-3 fs-md-3 fs-2"></i>
 
-                ntes
-            </h1>
+            </button>
+            <button class="my-3 card fw-bold h1 p-2 px-4 border-bottom border-secondary
+            d-flex align-items-center justify-content-center flex-row mx-3" type="button"
+                data-bs-target="#carouselMain" data-bs-slide-to="1" aria-label="Slide 2">
+
+                <i class="fa-solid fa-grip my-3 fs-md-3 fs-2"></i>
+
+            </button>
+            <button class="my-3 card fw-bold h1 p-2 px-4 border-bottom border-secondary
+            d-flex align-items-center justify-content-center flex-row mx-3" type="button"
+                data-bs-target="#carouselMain" data-bs-slide-to="2" aria-label="Slide 3">
+
+                <i class="fa-solid fa-briefcase my-3 fs-md-3 fs-2"></i>
+
+            </button>
         </div>
     </nav>
 
     <main class="vh-100">
-
-        <div id="carouselUsers" class="carousel slide vh-100" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselUsers" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselUsers" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselUsers" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
+        <div id="carouselMain" class="carousel slide vh-100" data-bs-ride="carousel">
 
             <div class="carousel-inner vh-100">
-                <div class="carousel-item active h-100">
-                    <div class="d-flex align-items-center justify-content-center h-100">
-
-                        <div class="card mb-3 my-5 col-lg-8">
-
-                            <div class="row g-0 content">
-
-                                <div class="col-md-5 d-flex align-items-center justify-content-center hoverScale">
-                                    <i class="fa-solid fa-user-tie my-3 fs-md-3"></i>
-                                </div>
-
-                                <div class="col-md-7">
-                                    <div class="card-body">
-                                        <h2 class="card-title h2 text-uppercase">Dr. Carlos Silva Martins</h2>
-
-                                        <h5 class="card-subtitle text-uppercase mt-4 mb-2">Formação
-                                            acadêmica
-                                        </h5>
-
-                                        <p class="card-text m-0 p-0">Doutorado em Psicologia Social (Universidade
-                                            Federal de São Paulo - UNIFESP)
-                                        </p>
-                                        <p class="card-text m-0 p-0">Mestrado em Psicologia Clínica (Universidade de
-                                            Campinas - UNICAMP)
-                                        </p>
-
-                                        <h5 class="card-subtitle text-uppercase mt-4 mb-2">Atuação
-                                            profissional
-                                        </h5>
-
-                                        <p class="card-text m-0 p-0">Professor titular na UNIFESP, especializado em
-                                            Psicologia Social, Estudos de Gênero e Dinâmica de grupos urbanos. Consultor
-                                            em inclusão social.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="carousel-item active h-100" data-bs-interval="10000">
+                    <iframe src="docentes.html" class="h-100 w-100"></iframe>
                 </div>
-
-                <div class="carousel-item h-100">
-                    <div class="d-flex align-items-center justify-content-center h-100">
-                        <div class="card mb-3 my-5 col-lg-8">
-                            <div class="row g-0 content">
-
-                                <div class="col-md-5 d-flex align-items-center justify-content-center hoverScale">
-                                    <i class="fa-solid fa-user-tie my-3 fs-md-3 fs-20rem"></i>
-                                </div>
-
-                                <div class="col-md-7">
-                                    <div class="card-body">
-                                        <h2 class="card-title h2 text-uppercase">Prof.ª Ana Luíza Costa Pereira</h2>
-
-                                        <h5 class="card-subtitle text-uppercase mt-4 mb-2">Formação
-                                            acadêmica
-                                        </h5>
-
-                                        <p class="card-text m-0 p-0">Graduação em Pedagogia (Universidade Estadual
-                                            Paulista - UNESP)
-                                        </p>
-                                        <p class="card-text m-0 p-0">Mestrado em Educação (Universidade Federal de Minas
-                                            Gerais - UFMG)</p>
-
-                                        <h5 class="card-subtitle text-uppercase mt-4 mb-2">Atuação
-                                            profissional
-                                        </h5>
-
-                                        <p class="card-text m-0 p-0">Professora na UNESP, com foco em metodologias de
-                                            ensino e educação inclusiva. Ex-coordenadora pedagógica em escolas públicas.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="carousel-item h-100" data-bs-interval="10000">
+                    <iframe src="grade.html" class="h-100 w-100"></iframe>
                 </div>
-
-                <div class="carousel-item h-100">
-                    <div class="d-flex align-items-center justify-content-center h-100">
-                        <div class="card mb-3 my-5 col-lg-8">
-                            <div class="row g-0 content">
-
-                                <div class="col-md-5 d-flex align-items-center justify-content-center hoverScale">
-                                    <i class="fa-solid fa-user-tie my-3 fs-md-3"></i>
-                                </div>
-
-                                <div class="col-md-7">
-                                    <div class="card-body">
-                                        <h2 class="card-title h2 text-uppercase">Dr. Felipe Souza Ribeiro</h2>
-
-                                        <h5 class="card-subtitle text-uppercase mt-4 mb-2">Formação
-                                            acadêmica
-                                        </h5>
-
-                                        <p class="card-text m-0 p-0">Doutorado em Engenharia de Software (Universidade
-                                            de São Paulo - USP)
-                                        </p>
-                                        <p class="card-text m-0 p-0">Mestrado em Ciências da Computação (Universidade
-                                            Estadual de Campinas - UNICAMP)</p>
-
-                                        <h5 class="card-subtitle text-uppercase mt-4 mb-2">Atuação
-                                            profissional
-                                        </h5>
-
-                                        <p class="card-text m-0 p-0">
-                                            Professor na USP, pesquisador em Inteligência Artificial e Aprendizado de
-                                            Máquina, com projetos aplicados à saúde e educação.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="carousel-item h-100" data-bs-interval="10000">
+                    <iframe src="trabalho.html" class="h-100 w-100"></iframe>
                 </div>
             </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselUsers" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselUsers" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
 
         </div>
     </main>
